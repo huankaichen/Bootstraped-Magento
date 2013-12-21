@@ -1,0 +1,8 @@
+
+<div class="collapse navbar-collapse hidden-xs hidden-sm hidden-md hidden-lg" id="top-menu-collapse">
+	<ul>  	
+		<?php foreach ($this->getStoreCategories() as $_category): ?>
+			<?php echo $this->drawItem($_category) ?>
+		<?php endforeach ?>
+    </ul>
+</div>

@@ -88,11 +88,11 @@ ul,ol         { list-style:none; }
 
 
 /* Layout ================================================================================ */
-.wrapper {}
-.page { width:1000px; margin:0 auto; padding:10px 0; text-align:left; }
-.page-print { background:#fff; padding:20px; text-align:left; }
-.page-empty { background:#fff; padding:20px; text-align:left; }
-.page-popup { padding:20px; text-align:left; }
+.wrapper { width: 100%;}
+.page { width:100%; margin:0 auto; padding:0; text-align:left; }
+.page-print { background:#fff; text-align:left; }
+.page-empty { background:#fff; text-align:left; }
+.page-popup { text-align:left; }
 .main-container {}
 .main { margin:10px 0; }
 
@@ -438,11 +438,11 @@ tr.summary-details-excluded { font-style:italic; }
 /* Header ================================================================================ */
 .logo { float:left; }
 .header-container {}
-.header { padding:10px; border:1px solid #ddd; }
-.header .logo { float:left; text-decoration:none !important; }
+.header { padding:10px;}
+.header .logo { float:left; text-decoration:none !important;}
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
-.header h1.logo { margin:0; padding:0; }
-.header .welcome-msg { font-weight:bold; text-align:right; }
+.header h1.logo { margin:0 0 10px 0; padding:0; }
+.header .welcome-msg { font-weight:bold; }
 .header .welcome-msg a {}
 .header .links { float:right; }
 .header .form-search { text-align:right; }
