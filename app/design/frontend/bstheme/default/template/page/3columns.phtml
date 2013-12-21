@@ -30,7 +30,9 @@
  */
 ?>
 <!DOCTYPE html>
+
 <html lang="<?php echo $this->getLang() ?>">
+
 <head>
     <?php echo $this->getChildHtml('head') ?>
 </head>
@@ -40,22 +42,27 @@
         <?php echo $this->getChildHtml('global_notices') ?>
         <div class="page">
             <?php echo $this->getChildHtml('header') ?>
-            <div class="main-container col2-right-layout container">
+            <div class="main-container col3-layout container">
                 <div class="row">
                     <div class="main">
                         <?php echo $this->getChildHtml('breadcrumbs') ?>
-                        <section role="main" class="col-main">
+                        <div class="col-wrapper">
+                            <section role="main" class="">
+                                <?php echo $this->getChildHtml('global_messages') ?>
 
-                            <div class="show-for-small off-canvas-buttons">
-                                <ul class="">
-                                    <li class="last"><a title="Right Sidebar" href="#" id="sidebarRightButton" class="off-canvas-right"> </a></li>
-                                </ul>
-                            </div>
+                                <div class="show-for-small off-canvas-buttons">
+                                    <ul class="">
+                                        <li><a title="Left Sidebar" href="#" id="sidebarLeftButton" class="off-canvas-left"> </a></li>
+                                        <li class="last"><a title="Right Sidebar" href="#" id="sidebarRightButton" class="off-canvas-right"> </a></li>
+                                    </ul>
+                                </div>
 
-                            <?php echo $this->getChildHtml('global_messages') ?>
-                            <?php echo $this->getChildHtml('content') ?>
-
-                        </section>
+                                <?php echo $this->getChildHtml('content') ?>
+                            </section>
+                            <section id="sidebar" role="complementary" class="col-left">
+                                <?php echo $this->getChildHtml('left') ?>
+                            </section>
+                        </div>
                         <section id="sidebar" role="complementary" class="col-right">
                             <?php echo $this->getChildHtml('right') ?>
                         </section>
@@ -69,6 +76,3 @@
     <?php echo $this->getAbsoluteFooter() ?>
 </body>
 </html>
-
-
-

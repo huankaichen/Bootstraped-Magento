@@ -30,35 +30,27 @@
  */
 ?>
 <!DOCTYPE html>
+
 <html lang="<?php echo $this->getLang() ?>">
+
 <head>
-    <?php echo $this->getChildHtml('head') ?>
+	<?php echo $this->getChildHtml('head') ?>
 </head>
+
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
     <?php echo $this->getChildHtml('after_body_start') ?>
     <div class="wrapper">
         <?php echo $this->getChildHtml('global_notices') ?>
         <div class="page">
             <?php echo $this->getChildHtml('header') ?>
-            <div class="main-container col2-right-layout container">
+            <div class="main-container col1-layout container">
                 <div class="row">
                     <div class="main">
                         <?php echo $this->getChildHtml('breadcrumbs') ?>
-                        <section role="main" class="col-main">
-
-                            <div class="show-for-small off-canvas-buttons">
-                                <ul class="">
-                                    <li class="last"><a title="Right Sidebar" href="#" id="sidebarRightButton" class="off-canvas-right"> </a></li>
-                                </ul>
-                            </div>
-
+                        <div class="twelve columns col-main">
                             <?php echo $this->getChildHtml('global_messages') ?>
                             <?php echo $this->getChildHtml('content') ?>
-
-                        </section>
-                        <section id="sidebar" role="complementary" class="col-right">
-                            <?php echo $this->getChildHtml('right') ?>
-                        </section>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,6 +61,3 @@
     <?php echo $this->getAbsoluteFooter() ?>
 </body>
 </html>
-
-
-

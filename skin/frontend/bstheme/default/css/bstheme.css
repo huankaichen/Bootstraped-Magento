@@ -45,3 +45,9 @@
 
 .topmenuExpanded {
 }
+
+.breadcrumb > li + li:before {
+    padding: 0px 2px;
+    color: rgb(204, 204, 204);
+    content: "/";
+}
