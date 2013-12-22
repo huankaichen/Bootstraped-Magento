@@ -41,25 +41,15 @@
         <div class="page">
             <?php echo $this->getChildHtml('header') ?>
             <div class="main-container col2-right-layout container">
-                <div class="row">
-                    <div class="main">
-                        <?php echo $this->getChildHtml('breadcrumbs') ?>
-                        <section role="main" class="col-main">
-
-                            <div class="show-for-small off-canvas-buttons">
-                                <ul class="">
-                                    <li class="last"><a title="Right Sidebar" href="#" id="sidebarRightButton" class="off-canvas-right"> </a></li>
-                                </ul>
-                            </div>
-
-                            <?php echo $this->getChildHtml('global_messages') ?>
-                            <?php echo $this->getChildHtml('content') ?>
-
-                        </section>
-                        <section id="sidebar" role="complementary" class="col-right">
-                            <?php echo $this->getChildHtml('right') ?>
-                        </section>
-                    </div>
+                <div class="main row row-offcanvas row-offcanvas-right">
+                    <?php echo $this->getChildHtml('breadcrumbs') ?>
+                    <section role="main" class="col-main col-xs-12 col-sm-8 col-md-9">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <?php echo $this->getChildHtml('content') ?>
+                    </section>
+                    <section id="sidebar" role="complementary" class="col-right col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+                        <?php echo $this->getChildHtml('right') ?>
+                    </section>
                 </div>
             </div>
             <?php echo $this->getChildHtml('footer') ?>

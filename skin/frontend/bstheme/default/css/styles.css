@@ -109,7 +109,7 @@ ul,ol         { list-style:none; }
 .col2-right-layout .col-main {}
 
 /* 3 Columns Layout */
-.col3-layout .col-main { margin-left:10px; }
+.col3-layout .col-main {}
 .col3-layout .col-wrapper { float:left;}
 .col3-layout .col-wrapper .col-main { float:right; }
 
@@ -120,11 +120,11 @@ ul,ol         { list-style:none; }
 .col2-set .col-wide {}
 
 .col3-set .col-1 { float:left;}
-.col3-set .col-2 { float:left; margin-left:2%; }
+.col3-set .col-2 { float:left;  }
 .col3-set .col-3 { float:right;}
 
 .col4-set .col-1 { float:left; }
-.col4-set .col-2 { float:left;margin:0 2%; }
+.col4-set .col-2 { float:left; }
 .col4-set .col-3 { float:left;}
 .col4-set .col-4 { float:right;}
 /* ======================================================================================= */

@@ -12,5 +12,9 @@ jQuery(document).ready(function() {
         jQuery(this).parent().siblings("li").children("ul:visible").slideUp("fast").parent("li").find("a").removeClass("topmenuExpanded");
         return false
     })
+
+    jQuery('[data-toggle=offcanvas]').click(function() {
+        jQuery('.row-offcanvas').toggleClass('active');
+    });
 });
 

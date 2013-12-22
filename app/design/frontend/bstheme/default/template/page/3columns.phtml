@@ -43,30 +43,26 @@
         <div class="page">
             <?php echo $this->getChildHtml('header') ?>
             <div class="main-container col3-layout container">
-                <div class="row">
-                    <div class="main">
-                        <?php echo $this->getChildHtml('breadcrumbs') ?>
-                        <div class="col-wrapper">
-                            <section role="main" class="">
-                                <?php echo $this->getChildHtml('global_messages') ?>
+                <div class="main row row-offcanvas row-offcanvas-right">
+                    <?php echo $this->getChildHtml('breadcrumbs') ?>
 
-                                <div class="show-for-small off-canvas-buttons">
-                                    <ul class="">
-                                        <li><a title="Left Sidebar" href="#" id="sidebarLeftButton" class="off-canvas-left"> </a></li>
-                                        <li class="last"><a title="Right Sidebar" href="#" id="sidebarRightButton" class="off-canvas-right"> </a></li>
-                                    </ul>
-                                </div>
-
-                                <?php echo $this->getChildHtml('content') ?>
-                            </section>
-                            <section id="sidebar" role="complementary" class="col-left">
-                                <?php echo $this->getChildHtml('left') ?>
-                            </section>
+                    <section id="sidebar" role="complementary" class="col-left col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <?php echo $this->getChildHtml('left') ?>
+                    </section>
+                    <section role="main" class="col-main col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <div class="show-for-small off-canvas-buttons">
+                            <ul class="">
+                                <li><a title="Left Sidebar" href="#" id="sidebarLeftButton" class="off-canvas-left"> </a></li>
+                                <li class="last"><a title="Right Sidebar" href="#" id="sidebarRightButton" class="off-canvas-right"> </a></li>
+                            </ul>
                         </div>
-                        <section id="sidebar" role="complementary" class="col-right">
-                            <?php echo $this->getChildHtml('right') ?>
-                        </section>
-                    </div>
+
+                        <?php echo $this->getChildHtml('content') ?>
+                    </section>
+                    <section id="sidebar" role="complementary" class="col-right col-xs-6 col-sm-3 col-md-3 col-lg-3 sidebar-offcanvas">
+                        <?php echo $this->getChildHtml('right') ?>
+                    </section>
                 </div>
             </div>
             <?php echo $this->getChildHtml('footer') ?>

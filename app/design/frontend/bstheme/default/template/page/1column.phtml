@@ -44,13 +44,11 @@
         <div class="page">
             <?php echo $this->getChildHtml('header') ?>
             <div class="main-container col1-layout container">
-                <div class="row">
-                    <div class="main">
-                        <?php echo $this->getChildHtml('breadcrumbs') ?>
-                        <div class="twelve columns col-main">
-                            <?php echo $this->getChildHtml('global_messages') ?>
-                            <?php echo $this->getChildHtml('content') ?>
-                        </div>
+                <div class="main row">
+                    <?php echo $this->getChildHtml('breadcrumbs') ?>
+                    <div class="twelve columns col-main col-xs-12">
+                        <?php echo $this->getChildHtml('global_messages') ?>
+                        <?php echo $this->getChildHtml('content') ?>
                     </div>
                 </div>
             </div>
