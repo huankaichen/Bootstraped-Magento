@@ -1223,7 +1223,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Footer ================================================================================ */
-.footer { border:1px solid #ddd; padding:10px; }
+.footer { padding: 10px 0;}
 .footer p { text-align:right; }
 .footer address { text-align:right; }
 .footer ul {}

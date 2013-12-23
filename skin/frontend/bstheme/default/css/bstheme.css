@@ -304,6 +304,14 @@
     }
 }
 
+#lsidebar, #rsidebar {
+    background: #ffffff;
+}
 #lsidebar .block, #rsidebar .block {
     overflow: hidden;
+}
+
+.footer-container {
+    margin: 20px 0 0 0;
+    background: #ececec;
 }
