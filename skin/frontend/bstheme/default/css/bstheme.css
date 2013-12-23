@@ -303,3 +303,7 @@
         width: 100%; /* 12 columns */
     }
 }
+
+#lsidebar .block, #rsidebar .block {
+    overflow: hidden;
+}
