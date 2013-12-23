@@ -361,6 +361,7 @@
 .product-grid-item {
     padding-left: 0px;
     padding-right: 0px;
+    overflow: hidden;
 }
 
 .product-grid-item .thumbnail {
@@ -373,7 +374,9 @@
     border-radius: 0;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+    min-height: 352px;
 }
 
 .thumbnail a img {
+    overflow: hidden;
 }
