@@ -43,6 +43,11 @@
 <?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
     <ul>
+        <li>
+            <a href='<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($popupImageSize[0], $popupImageSize[1]); ?>' class='cloud-zoom-gallery' title='Thumbnail Original'
+               rel="useZoom: 'zoom1', smallImage: '<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($mainImageSize[0], $mainImageSize[1]); ?>' ">
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($additionalImageSize[0], $additionalImageSize[1]); ?>" alt = "<?php echo $this->htmlEscape($this->getImageLabel()) ?>"/></a>
+        </li>
 	<?php $i=0 ?>
 
     <?php foreach ($this->getGalleryImages() as $_image): ?>
