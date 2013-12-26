@@ -1,0 +1,57 @@
+<?php
+/**
+
+ */
+?>
+<?php
+
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+	$_productDetails = Mage::getStoreConfig('product_details/general');
+	/* Main Image Size */
+    if (strstr($_productDetails['mainImageSize'], '_')) {
+        $mainImageSize = explode('_', $_productDetails['mainImageSize'], 2);
+    } else {
+        $mainImageSize = array(265, 265);
+    }
+    /* Popup Image Size */
+    if (strstr($_productDetails['popupImageSize'], '_')) {
+        $popupImageSize = explode('_', $_productDetails['popupImageSize'], 2);
+    } else {
+        $popupImageSize = array(0, 0);
+    } 
+    /* Additional Images Size */
+    if (strstr($_productDetails['additionalImageSize'], '_')) {
+        $additionalImageSize = explode('_', $_productDetails['additionalImageSize'], 2);
+    } else {
+        $additionalImageSize = array(60, 60);
+    }
+    
+    $image = $this->helper('catalog/image')->init($_product, 'image');
+    if ($popupImageSize[0] > 0) {
+        $image = $this->helper('catalog/image')->init($_product, 'image')->resize($popupImageSize[0], $popupImageSize[1]);
+    }
+?>
+
+		<div class="rollover"><img src="<?php echo $this->getSkinUrl('images/rollover.jpg');?>"/></div>
+	    
+        <a href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($popupImageSize[0], $popupImageSize[1]); ?>"  class = 'cloud-zoom' id='zoom1'rel="adjustX: 10, adjustY:0"  >
+            <img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($mainImageSize[0], $mainImageSize[1]);?>"  title="<?php echo $this->htmlEscape($this->getImageLabel())?>"  />
+        </a>
+ 
+
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views">
+    <ul>
+	<?php $i=0 ?>
+
+    <?php foreach ($this->getGalleryImages() as $_image): ?>
+        <li>
+		 <a href='<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($popupImageSize[0], $popupImageSize[1]); ?>' class='cloud-zoom-gallery' title='Thumbnail <?php echo $i=$i+1; ?>'
+		 rel="useZoom: 'zoom1', smallImage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($mainImageSize[0], $mainImageSize[1]); ?>' ">
+        <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($additionalImageSize[0], $additionalImageSize[1]); ?>" alt = "<?php echo $this->htmlEscape($_image->getLabel()) ?>"/></a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

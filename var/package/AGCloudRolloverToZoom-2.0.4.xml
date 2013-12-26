@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+    <name>AGCloudRolloverToZoom</name>
+    <version>2.0.4</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>arabgento.com : this extension module for generate extra zooming picture in section product details</summary>
+    <description>is recomended the uses of version 2.0.0 stable&#xD;
+all errors in other versions in resolved&lt;br/&gt;&lt;br/&gt;&#xD;
+go to reslease note and use version 2.0.0&#xD;
+support skype : arabgento&#xD;
+&lt;p&gt;link  for download of last version compatible 1.5 and 1.6  it's work perfectly&lt;/p&gt;&#xD;
+&lt;p&gt;http://www.arabgento.com/AGCloudRolloverToZoom-1.0.4.tgz&lt;/p&gt;&#xD;
+&lt;p&gt;arabgento.com&lt;/p&gt;&#xD;
+&lt;p&gt;this extension module is for generate extra zooming picture in section product details product view create gallery inline zoom inline with rollover mouse in image base you create a very pratical zoom&#xA0; for augmented a user experince the module use a cloud zoom plugin this extension is created by elmarrouani said from arabgento community&#xA0; arabgento.com&lt;/p&gt;</description>
+    <notes>it' s tested and worked</notes>
+    <authors><author><name>arabgento community</name><user>arabgento</user><email>contact@arabgento.com</email></author></authors>
+    <date>2012-09-09</date>
+    <time>17:28:30</time>
+    <contents><target name="magecommunity"><dir name="Arabgento"><dir name="Productdetails"><dir name="Helper"><file name="Data.php" hash="9e05da310d80b369f42a9fba7fdb1721"/></dir><dir name="etc"><file name="adminhtml.xml" hash="13c440824b2eb4d635e4c8b68ed0b4d2"/><file name="config.xml" hash="f640e735b634e51263d64cb9f79b57d9"/><file name="system.xml" hash="d2698187775211f29acb810a3ddfde5b"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="productdetails.xml" hash="194c71210b8e12e63d01632a587b0020"/></dir><dir name="template"><dir name="productdetails"><file name="media.phtml" hash="89395deedc116d02ebb3c7984bbfbd05"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="productdetails"><file name="cloud-zoom.css" hash="f8441f96bfff24b718197817e5d70883"/></dir></dir><dir name="js"><dir name="productdetails"><file name="cloud-zoom.1.0.2.js" hash="a5cf8cca691d3d60c0253750d4c77f05"/><file name="jquery.min.js" hash="10092eee563dec2dca82b77d2cf5a1ae"/></dir></dir><dir name="images"><file name="rollover.jpg" hash="d26b2a2874dfc0b816469365c667dbf3"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Arabgento_RollOverToZoom.xml" hash="2bfea07d993cc89be6bc81be27a69929"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
